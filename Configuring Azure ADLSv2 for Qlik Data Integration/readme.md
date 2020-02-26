@@ -4,13 +4,22 @@
 
 ## **Partner Engineering**
 
-<br><br><br><br>
+<br>
+<br>
+<br>
+<br>
 
 John Park<br>
 Principal Solution Architect<br>
 john.park@qlik.com
 
-**Version: 1.1**
+**Version: 1.1**<br>
+**Initial Release Date: 17-Feb-20**
+
+![](./media/image2.png)<br>
+<br>
+<br>
+<br>
 
 **Revisions**      | **Notes**   | **Date**  | **Version**
 ------------------ | ----------- | --------- | -----------
