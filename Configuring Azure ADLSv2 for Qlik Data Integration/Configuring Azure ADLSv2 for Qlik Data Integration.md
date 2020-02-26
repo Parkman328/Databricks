@@ -4,10 +4,7 @@
 
 ## **Partner Engineering**
 
-<br>
-<br>
-<br>
-<br>
+<br><br><br><br>
 
 John Park<br>
 Principal Solution Architect<br>
@@ -195,7 +192,7 @@ Once in the Screen on the right side of the screen select:
 
 - _Assign access to_: Azure AD user, group, or service principal
 
-- _Select_: enter the name of the App you registered previously. [**_Figure A.2.4_**](#figure-a.2.4.)
+- _Select_: enter the name of the App you registered previously. (**_Figure A.2.4_**)
 
 and press "Save" button at the bottom of the page.
 
