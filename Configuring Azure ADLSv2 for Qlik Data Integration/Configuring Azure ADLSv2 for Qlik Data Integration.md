@@ -4,16 +4,20 @@
 
 ## **Partner Engineering**
 
-John Park\ Principal Solution Architect\ john.park@qlikcom
+<br><br><br><br>
 
-**Version: 1.0**
+John Park<br>
+Principal Solution Architect<br>
+john.park@qlik.com
 
-**Revisions**      | **Notes**   | **Date**
------------------- | ----------- | ---------
-Initial Draft      | 20-Feb-20   | John Park |
-Review of Language | 20-Feb-20   | John Park |
-Final Edit for V1  | 21-Feb-20   | John Park |
-Edits for Markdown | 25- Feb -20 | John Park |
+**Version: 1.1**
+
+**Revisions**      | **Notes**   | **Date**  | **Version**
+------------------ | ----------- | --------- | -----------
+Initial Draft      | 20-Feb-2020 | John Park | 0.1         |
+Review of Language | 20-Feb-2020 | John Park | 0.2         |
+Final Edit for V1  | 21-Feb-2020 | John Park | 1.0         |
+Edits for Markdown | 25-Feb-2020 | John Park | 1.1         |
 
 # Table of Contents
 
@@ -61,11 +65,11 @@ If you do not already have an ADLSv2 storage account, we need to create one now.
 
 **_Figure A.1.0._**
 
-![](./media/image3.png){width="6.8079932195975505in" height="2.240964566929134in"}
+![](./media/image3.png)
 
 Inside Storage Accounts click "+ Add".\ **_Figure A.1.1_**
 
-![](./media/image4.png){width="6.5in" height="1.4375in"}
+![](./media/image4.png)
 
 Select your azure subscription and an existing resource group or select _"_Add" to create a new storage account one. Next choose a name for your storage account and a location. For Account kind be sure that it says StorageV2 (general purpose v2).
 
@@ -87,7 +91,7 @@ Click "Next: Advanced" at the bottom of the page. On the Advanced tab, we want t
 
 **_Figure A.1.4._**
 
-![](./media/image7.png){width="2.875in" height="2.5625in"}
+![](./media/image7.png)
 
 Configuration is complete. Press Review + create at the bottom of the page. Azure will validate what you have configured.
 
@@ -138,19 +142,19 @@ Next, we need to grant this application some basic permissions. Click on _API pe
 
 From there, check "user_impersonation" under "Delegated permissions" and then press "Add permissions" button at the bottom of the page
 
-**_Figure A.2.8_**![](./media/image17.jpg) Now we need to create a "secret" (essentially a password) for this API. Click on "Certificates & secrets" on the left side of the screen and click on "+ New client secret".**_Figure A.2.9_** ![](./media/image18.jpg){width="4.246988188976378in" height="2.089012467191601in"}
+**_Figure A.2.8_**![](./media/image17.jpg) Now we need to create a "secret" (essentially a password) for this API. Click on "Certificates & secrets" on the left side of the screen and click on "+ New client secret".**_Figure A.2.9_** ![](./media/image18.jpg)
 
 Enter a description, choose an expiration, and press "_Add."_
 
 **_Figure A.2.10_**
 
-![](./media/image19.png){width="3.6666666666666665in" height="2.6145833333333335in"}
+![](./media/image19.png)
 
 **IMPORTANT NOTE**: Make Note of value of "Secret" you generated. You must save the value of the secret you created before you leave this page. You will not be able to retrieve it again later.
 
 **_Figure A.2.11_**
 
-![](./media/image20.jpg){width="6.5in" height="2.8541666666666665in"}
+![](./media/image20.jpg)
 
 ### **Part 3 - Finalizing Configuration of the ADLS-2 Storage Account**
 
@@ -160,25 +164,25 @@ First, we need to create a "Container" for us to use for the Qlik Replicate. Sel
 
 **_Figure A.3.1_**
 
-![](./media/image21.jpg){width="5.25in" height="2.4583333333333335in"}
+![](./media/image21.jpg)
 
 Inside your Storage account "+ Container" at the top of the page.
 
 **_Figure A.3.2_**
 
-![](./media/image22.png){width="5.201115485564304in" height="3.267716535433071in"}
+![](./media/image22.png)
 
 Enter a name for the Container and press "OK" to save it.
 
 **_Figure A.3.3_**
 
-![](./media/image23.jpg){width="6.5in" height="3.21875in"}
+![](./media/image23.jpg)
 
 As a final step, we need to grant access to the storage account to the "App" that we created / registered previously. Click on "Access control (IAM)" on the left side of the page.
 
 **_Figure A.3.4_**
 
-![](./media/image24.jpg){width="6.5in" height="2.0208333333333335in"}
+![](./media/image24.jpg)
 
 Click on "Add a role assignment" on right.
 
@@ -186,15 +190,15 @@ Once in the Screen on the right side of the screen select:
 
 - _Role**_:** Storage Blob Data Contributor
 
-- _Assign access to_: `Azure AD user, group, or service principal
+- _Assign access to_: Azure AD user, group, or service principal
 
-- _Select_: enter the name of the App you registered previously. (**_Figure A.2.4_**)
+- _Select_: enter the name of the App you registered previously. [**_Figure A.2.4_**](#figure-a.2.4)
 
 and press "Save" button at the bottom of the page.
 
 **_Figure A.3.5_**
 
-![](./media/image25.jpg){width="6.5in" height="3.1354166666666665in"}
+![](./media/image25.jpg)
 
 ### **Part 4 - Create a Target Directory in the File System**
 
@@ -204,12 +208,12 @@ To get started, go to your ADLS-2 storage account and click on Storage Explorer 
 
 **_Figure A.4.1_**
 
-![](./media/image26.png){width="5.052084426946632in" height="2.2291666666666665in"}
+![](./media/image26.png)
 
 From there click on Blob Container Created and Add New Folders for Qlik Replicate (In this example we used "test" as folder name)
 
 **_Figure A.4.2_**
 
-![](./media/image27.jpg){width="5.04166447944007in" height="2.78125in"}
+![](./media/image27.jpg)
 
 In the next section we will configure Azure Databricks to make use of this storage and make it ready to ingest data delivered by Qlik Replicate.
