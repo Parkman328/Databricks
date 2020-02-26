@@ -86,7 +86,7 @@ Click "Next: Networking" at the bottom of the page. Make note of the name of the
 
 For this setup we want to make Storage open to public, but you can change the setup to fit your organization needs. If Storage Account Network is configured Private endpoints with Private virtual networks, make sure to add 2 subnets that Azure Databricks creates so Storage Account is accessible to Azure Databricks.
 
-**__Upon launching Azure Databricks, the service will create "Databricks-Private" and "Databricks-Public" subnets.__**
+****Upon launching Azure Databricks, the service will create "Databricks-Private" and "Databricks-Public" subnets.****
 
 **_Figure A.1.3_**
 
@@ -134,11 +134,13 @@ Choose a name for your App and press "Register" at the bottom of the page. You d
 
 Registration is almost immediate. Make note of the location of the "Application (client) ID" and "Directory (tenant) ID" fields at the top of the page. You will need this information later when configuring Replicate.
 
-**_Figure A.2.4_** ![](./media/image13.png)
+**_Figure A.2.4_**<br>
+![](./media/image13.png)
 
 Next, we need to grant this application some basic permissions. Click on _API permissions_ on the left side of the page.
 
-**_Figure A.2.5_** ![](./media/image14.jpg) Click "_+ Add permission"_ followed by _Azure Data Lake_ under "Microsoft APIs" on the right side of the screen.
+**_Figure A.2.5_**<br>
+![](./media/image14.jpg) Click "_+ Add permission"_ followed by _Azure Data Lake_ under "Microsoft APIs" on the right side of the screen.
 
 **_Figure A.2.6_** ![](./media/image15.jpeg)
 
