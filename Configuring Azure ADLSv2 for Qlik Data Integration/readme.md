@@ -4,10 +4,7 @@
 
 ## **Partner Engineering**
 
-<br>
-<br>
-<br>
-<br>
+<br><br><br><br>
 
 John Park<br>
 Principal Solution Architect<br>
@@ -54,11 +51,11 @@ Please see Official Documentation about ADLSv2 here:
 
 **High Level Overview**
 
-- **Create or Configure Azure Data Lake Storage (ADLS) Gen2**
+- Create or Configure Azure Data Lake Storage (ADLS) Gen2
 
-- **Create Azure Active Directory Application**
+- Create Azure Active Directory Application
 
-- **Create ADLS File System and Folder**
+- Create ADLS File System and Folder
 
 ### **Part 1 - Create or Configure Azure Data Lake Storage (ADLS) Gen2**
 
