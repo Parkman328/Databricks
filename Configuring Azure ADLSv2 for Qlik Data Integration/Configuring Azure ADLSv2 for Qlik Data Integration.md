@@ -4,7 +4,10 @@
 
 ## **Partner Engineering**
 
-<br><br><br><br>
+<br>
+<br>
+<br>
+<br>
 
 John Park<br>
 Principal Solution Architect<br>
@@ -87,7 +90,7 @@ For this setup we want to make Storage open to public, but you can change the se
 
 ![](./media/image6.png)
 
-Click "Next: Advanced" at the bottom of the page. On the Advanced tab, we want to be sure that Data Lake Storage Gen2 "Hierarchical namespace" is enabled.
+Click "Next: Advanced" at the bottom of the page. On the Advanced tab, we want to be sure that Data Lake Storage Generation 2 "Hierarchical namespace" is enabled.
 
 **_Figure A.1.4._**
 
@@ -192,7 +195,7 @@ Once in the Screen on the right side of the screen select:
 
 - _Assign access to_: Azure AD user, group, or service principal
 
-- _Select_: enter the name of the App you registered previously. [**_Figure A.2.4_**](#figure-a.2.4)
+- _Select_: enter the name of the App you registered previously. [**_Figure A.2.4_**](#figure-a.2.4.)
 
 and press "Save" button at the bottom of the page.
 
