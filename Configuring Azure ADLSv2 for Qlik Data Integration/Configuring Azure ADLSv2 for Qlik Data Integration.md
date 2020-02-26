@@ -4,7 +4,10 @@
 
 ## **Partner Engineering**
 
-<br><br><br><br>
+<br>
+<br>
+<br>
+<br>
 
 John Park<br>
 Principal Solution Architect<br>
@@ -27,7 +30,7 @@ Edits for Markdown | 25-Feb-2020 | John Park | 1.1         |
 
 [Part 1 - Create or Configure Azure Data Lake Storage (ADLS) Gen2](#part-1---create-or-configure-azure-data-lake-storage-adls-gen2)
 
-[Part 2 - Create an Active Directory "App Registration"**](#part-2---create-an-active-directory-and-perform-app-registration)
+[Part 2 - Create an Active Directory "App Registration"](#part-2---create-an-active-directory-and-perform-app-registration)
 
 [Part 3 - Finalizing Configuration of the ADLS-2 Storage Account](#part-3---finalizing-configuration-of-the-adls-2-storage-account)
 
@@ -61,19 +64,19 @@ Please see Official Documentation about ADLSv2 here:
 
 First, we need to set up the Azure storage account that Qlik Replicate will use to map data into Azure Databricks. We will setup Azure Data Lake Storage (ADLSv2) to manage the external tables.
 
-If you do not already have an ADLSv2 storage account, we need to create one now. From your Azure portal home page, click on Storage Accounts.
-
+If you do not already have an ADLSv2 storage account, we need to create one now. From your Azure portal home page, click on Storage Accounts.<br>
 **_Figure A.1.0._**
 
 ![](./media/image3.png)
 
-Inside Storage Accounts click "+ Add".\ **_Figure A.1.1_**
+Inside Storage Accounts click "+ Add".<br>
+**_Figure A.1.1_**
 
 ![](./media/image4.png)
 
-Select your azure subscription and an existing resource group or select _"_Add" to create a new storage account one. Next choose a name for your storage account and a location. For Account kind be sure that it says StorageV2 (general purpose v2).
+Select your azure subscription and an existing resource group or select "Add" to create a new storage account one. Next choose a name for your storage account and a location. For Account kind be sure that it says StorageV2 (general purpose v2).
 
-*Refer to your IT Policies for Subscriptions and Resource Groups
+**_Refer to your IT Policies for Subscriptions and Resource Groups._**
 
 **_Figure A.1.2_**
 
@@ -81,7 +84,9 @@ Select your azure subscription and an existing resource group or select _"_Add" 
 
 Click "Next: Networking" at the bottom of the page. Make note of the name of the "Storage account name" on this page.
 
-For this setup we want to make Storage open to public, but you can change the setup to fit your organization needs. If Storage Account Network is configured Private endpoints with Private virtual networks, make sure to add 2 subnets that Azure Databricks creates so Storage Account is accessible to Azure Databricks. _Upon launching Azure Databricks, the service will create "Databricks-Private" and "Databricks-Public" subnets._
+For this setup we want to make Storage open to public, but you can change the setup to fit your organization needs. If Storage Account Network is configured Private endpoints with Private virtual networks, make sure to add 2 subnets that Azure Databricks creates so Storage Account is accessible to Azure Databricks.
+
+**__Upon launching Azure Databricks, the service will create "Databricks-Private" and "Databricks-Public" subnets.__**
 
 **_Figure A.1.3_**
 
