@@ -28,6 +28,7 @@ Final Edit for V1  | 21-Feb-2020 | John Park | 1.0         |
 Edits for Markdown | 25-Feb-2020 | John Park | 1.1         |
 
 # Table of Contents
+--------------------
 
 [**Summary**](#summary)
 
@@ -42,6 +43,7 @@ Edits for Markdown | 25-Feb-2020 | John Park | 1.1         |
 [**Part 4 - Create a Target Directory in the File System**](#part-4---create-a-target-directory-in-the-file-system)
 
 ## **Summary**
+--------------
 
 This document was created to supplement Qlik Replicate and Qlik Compose Documentation. This guide is for customers intending to use Qlik Data Integration suite and Azure ADLSv2 and Azure Databricks. The Official Documentation can be found at
 
@@ -81,7 +83,7 @@ Inside Storage Accounts click "+ Add".<br>
 
 Select your azure subscription and an existing resource group or select "Add" to create a new storage account one. Next choose a name for your storage account and a location. For Account kind be sure that it says StorageV2 (general purpose v2).
 
-**_Refer to your IT Policies for Subscriptions and Resource Groups._**
+> **_Refer to your IT Policies for Subscriptions and Resource Groups._**
 
 **_Figure A.1.2_**
 
