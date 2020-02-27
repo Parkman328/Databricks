@@ -197,7 +197,7 @@ As a final step, we need to grant access to the storage account to the "App" tha
 ![](./media/image24.jpg)
 
 Click on "Add a role assignment" on right.
-
+# Table of Contents# Table of Contents
 Once in the Screen on the right side of the screen select:
 
 - _Role**_:** Storage Blob Data Contributor

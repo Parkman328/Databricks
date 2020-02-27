@@ -1,67 +1,59 @@
-![Qlik](./media/image1.png){width="3.2083333333333335in"
-height="0.9791666666666666in"}
+![Qlik](./media/image1.png)  
 
-Tutorial -- Qlik Replicate and Azure Databricks
 
-Partner Engineering
+# **_Tutorial -- Qlik Replicate and Azure Databricks_**
 
-**Version: 1.0**
+## **Partner Engineering**
 
-**Initial Release Date: 17-Feb-20**
+<br>
+<br>
+<br>
+<br>
+John Park<br>
+Principal Solution Architect<br>
+john.park@qlik.com
 
-![A close up of a logo Description automatically
-generated](./media/image2.png){width="2.9166666666666665in"
-height="1.875in"}
+![](./media/image2.png)
 
-  **Revisions**                                                         **Notes**       **DATE**
-  --------------------------------------------------------------------- --------------- ----------
-  John Park/Author/ Principal Solution Architect, Partner Engineering   Initial Draft   18-Feb
+**Version: 1.1**<br>
+**Initial Release Date: 17-Feb-20**<br><br><br><br>
 
-  {#section .TOCHeading}
-=
+**Revisions**      | **Notes**   | **Date**  | **Version**
+------------------ | ----------- | --------- | -----------
+Initial Draft      | 03-Jan-2020 | John Park | 0.1         |
+Additional Changes | 14-Feb-2020 | John Park | 0.2         |
+Final Edit for V1  | 21-Feb-2020 | John Park | 0.4         |
+Cosmetic Changes   | 21-Feb-2020 | John Park | 1.0         |
+Edits for Markdown | 25-Feb-2020 | John Park | 1.1         |
 
-Table of Contents {#table-of-contents .TOCHeading}
-=================
+--------------------------------------------------------------------------------
+# Table of Contents
 
-[Summary 4](#summary)
+[**Summary**](#summary)
 
-[Section A -- Configure/Verify MySQL Database
-5](#section-a-configureverify-mysql-database)
+[**Section A - Configure/Verify MySQL Database**](#section-a-configureverify-mysql-database)
 
-[**Part 1 -- Verify MySQL Database** 5](#part-1-verify-mysql-database)
+[**Part 1 - Verify MySQL Database**](#part-1-verify-mysql-database)
 
-[**Part 2-- Create Sample Schema and Load Data**
-5](#part-2-create-sample-schema-and-load-data)
+[**Part 2 - Create Sample Schema and Load Data**](#part-2-create-sample-schema-and-load-data)
 
-[**Part 3 -- Create and Configure Qlik Replicate Connection for MySQL
-DB**
-7](#part-3-create-and-configure-qlik-replicate-connection-for-mysql-db)
+[**Part 3 - Create and Configure Qlik Replicate Connection for MySQL DB**](#part-3-create-and-configure-qlik-replicate-connection-for-mysql-db)
 
-[Section B -- Configure/Verify Azure Databricks
-10](#section-b-configureverify-azure-databricks)
+[**Section B - Configure/Verify Azure Databricks**](#section-b-configureverify-azure-databricks)
 
-[**Part 1 -- Verify Azure Databricks**
-10](#part-1-verify-azure-databricks)
+[**Part 1 - Verify Azure Databricks**](#part-1-verify-azure-databricks)
 
-[**Part 2-- Create/Verify Azure ADLS 2 and Databricks Connection**
-10](#part-2-createverify-azure-adls-2-and-databricks-connection)
+[**Part 2 - Create/Verify Azure ADLS 2 and Databricks Connection**](#part-2-createverify-azure-adls-2-and-databricks-connection)
 
-[Section C -- Create Qlik Replicate CDC Job from MySQL to Azure
-Databricks
-12](#section-c-create-qlik-replicate-cdc-job-from-mysql-to-azure-databricks)
+[**Section C - Create Qlik Replicate CDC Job from MySQL to Azure Databricks**](#section-c-create-qlik-replicate-cdc-job-from-mysql-to-azure-databricks)
 
-[**Part 1 -- Create Qlik Replicate CDC Job**
-12](#part-1-create-qlik-replicate-cdc-job)
+[**Part 1 - Create Qlik Replicate CDC Job**](#part-1-create-qlik-replicate-cdc-job)
 
-[**Part 2-- Test Initial Load and Verify Data Movements to Azure
-Databricks**
-17](#part-2-test-initial-load-and-verify-data-movements-to-azure-databricks)
+[**Part 2 - Test Initial Load and Verify Data Movements to Azure Databricks**](#part-2-test-initial-load-and-verify-data-movements-to-azure-databricks)
 
-[**Part 3 -- Test Changes and Verify Delta Movements to Azure
-Databricks**
-18](#part-3-test-changes-and-verify-delta-movements-to-azure-databricks)
+[**Part 3 - Test Changes and Verify Delta Movements to Azure Databricks**](#part-3-test-changes-and-verify-delta-movements-to-azure-databricks)
 
- **Summary **
+## **Summary**
 -------------
 
 This document was created to supplement Qlik Replicate Documentation for
@@ -85,10 +77,9 @@ High Level Overview
 
 High Level Architecture
 
-![](./media/image3.png){width="5.807228783902012in"
-height="1.2666666666666666in"}
+![](./media/image3.png)
 
-Prerequisites for this this Tutorial are following:
+**Prerequisites for this this Tutorial are following:**
 
 1.  Working Azure Account with ability to access to resources
 
@@ -101,7 +92,7 @@ Prerequisites for this this Tutorial are following:
 5.  Connectivity between MySQL Database, Qlik Replicate Server and Azure
     Databricks instances.
 
-**Section A -- Configure/Verify MySQL Database**
+**Section A - Configure/Verify MySQL Database**
 ------------------------------------------------
 
 ### **Part 1 -- Verify MySQL Database**
@@ -109,18 +100,17 @@ Prerequisites for this this Tutorial are following:
 For this tutorial We have setup a MySQL 8.0.19 CE Database Sample
 Database
 
-*Note: For this Tutorial to work MySQL must **enable binary logging**
-and use **mysql\_native\_password** for authentication.*
+> *Note: For this Tutorial to work MySQL must **enable binary logging**
+and use **mysql_native_password** for authentication.*
 
 Verify Database Connectivity Using MySQL Workbench.
 
-***Figure A.2***
+***Figure A.1***
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image4.png){width="3.8192771216097987in"
-height="2.4115310586176726in"}
+generated](./media/image4.png)
 
-### **Part 2-- Create Sample Schema and Load Data**
+### **Part 2 - Create Sample Schema and Load Data**
 
 The Data we will use will be from Baseball Data from
 <http://www.seanlahman.com/baseball-archive/statistics/>
@@ -130,33 +120,33 @@ Download the MySQL Version of Data and Execute
 Note the Baseball Data Version we are using is 2019 data and it must be
 loaded to MySQL Version 8.0
 
-***Figure A.2***
+***Figure A.2.0***
 
 ![A screenshot of a social media post Description automatically
-generated](./media/image5.jpeg){width="4.379517716535433in"
-height="2.419963910761155in"}
+generated](./media/image5.jpeg)
 
 Once the Import has finished you should be able inspect the database and
 see tables, and results from sample query.
 
-***Figure A.3***
+***Figure A.2.1***
 
 ![A screenshot of a social media post Description automatically
-generated](./media/image6.jpeg){width="4.33965113735783in"
-height="2.6204811898512688in"}
+generated](./media/image6.jpeg)
 
-*Sample Query --*
 
-*use lahmansbaseballdb;*
+ **Sample Query**
+```
+use lahmansbaseballdb;
 
-*select \* from people;*
+select \* from people; 
+```
 
 ### **Part 3 -- Create and Configure Qlik Replicate Connection for MySQL DB**
 
 Now we will create Qlik Replicate connections for Source and verify the
 connection. Qlik Replicate should be installed and functional.
 
-*For this document we are using Attunity Replicate Version 6.5.0.354. *
+> **For this document we are using Attunity Replicate Version 6.5.0.354.**
 
 After login on the first thing we need to do is create a source
 endpoint. We do this by clicking the Manage Endpoint Connections button
@@ -165,16 +155,14 @@ at the top of the screen.
 ***Figure A.4***
 
 ![Manage Endpoints
-Image](./media/image7.png){width="4.721729002624672in"
-height="1.85542104111986in"}
+Image](./media/image7.png)
 
 Following Prompt will appear.
 
 ***Figure A.5***
 
 ![Add New Endpoint
-Image](./media/image8.png){width="3.6807228783902013in"
-height="2.74913823272091in"}
+Image](./media/image8.png)
 
 From there, click on "*Add New Endpoint Connection"* link or the + New
 Endpoint Connection button at the top of the screen.
@@ -183,8 +171,7 @@ Once you do that you will see this window:
 
 ***Figure A.6***
 
-![New Endpoint Image](./media/image9.png){width="3.584255249343832in"
-height="2.6912554680664917in"}
+![New Endpoint Image](./media/image9.png)
 
 We will now create a MySQL source endpoint:
 
@@ -210,8 +197,7 @@ Fill in the blanks as indicated in the images above:
 ***Figure A.7***
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image10.jpeg){width="3.704819553805774in"
-height="2.8601531058617673in"}
+generated](./media/image10.jpeg)
 
 Click on Test Connection. Your screen should look like the following,
 indicating that your connection succeeded.
@@ -265,9 +251,7 @@ Following Information should be gathered
 ***Figure B.1***
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image11.jpg){width="3.801205161854768in"
-height="2.0325885826771652in"}
-
+generated](./media/image11.jpg)
 **Databricks ODBC Access:**
 
 -   Host: \_\_\_\_\_\_\_\_\_\_\_ (Azure Databricks Portal --\> Clusters
@@ -290,8 +274,7 @@ height="2.0325885826771652in"}
 ***Figure B.2***
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image12.jpg){width="4.228472222222222in"
-height="2.2587992125984253in"}
+generated](./media/image12.jpg)
 
 Click on Test Connection. Your screen should look like the following,
 indicating that your connection succeeded.
@@ -299,8 +282,7 @@ indicating that your connection succeeded.
 ***Figure B.3 ***
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image13.jpg){width="4.228915135608049in"
-height="2.580722878390201in"}
+generated](./media/image13.jpg)
 
 **\
 **
@@ -327,15 +309,12 @@ at the top of the screen.
 
 ***Figure C.1***
 
-![Create Task 1 Image](./media/image14.png){width="3.925051399825022in"
-height="0.8975907699037621in"}
-
+![Create Task 1 Image](./media/image14.png)
 Once you do, a window like this will pop up:
 
 ***Figure C.2***
 
-![Create Task 2a Image](./media/image15.png){width="2.397590769903762in"
-height="3.034096675415573in"}
+![Create Task 2a Image](./media/image15.png)
 
 Give this task a meaningful name like MySQL-to-Azure Databricks. For
 this task we will take the defaults:
@@ -356,8 +335,7 @@ this task we will take the defaults:
 ***Figure C.3***
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image16.jpeg){width="2.1496959755030622in"
-height="2.650602580927384in"}
+generated](./media/image16.jpeg)
 
 Once you have everything set, press OK to create the task. When you have
 completed this step, you will see a window that looks like this:
@@ -365,8 +343,7 @@ completed this step, you will see a window that looks like this:
 ***Figure C.4***
 
 ![A screenshot of a social media post Description automatically
-generated](./media/image17.jpg){width="4.180722878390201in"
-height="2.056862423447069in"}
+generated](./media/image17.jpg)
 
 Attunity is all about ease of use. The interface is point-and-click,
 drag-and-drop. To configure our task, we need to select a source
@@ -385,8 +362,7 @@ the following:
 ***Figure C.5***
 
 ![A screenshot of a social media post Description automatically
-generated](./media/image18.jpeg){width="4.130218722659667in"
-height="1.9552351268591426in"}
+generated](./media/image18.jpeg)
 
 Our next step is to select the tables we want to replicate from MySQL
 into Azure Databricks. Click on the *Table Selection\...* button in the
@@ -395,14 +371,12 @@ top center of your browser.
 ***Figure C.6***
 
 ![A picture containing screenshot Description automatically
-generated](./media/image19.jpeg){width="6.5in"
-height="0.8409722222222222in"}
+generated](./media/image19.jpeg)
 
 and from there select the ***lahmansbaseballdb*** schema.
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image20.jpg){width="3.42253280839895in"
-height="2.271084864391951in"}
+generated](./media/image20.jpg)
 
 Press the ***Search*** button. This will retrieve a list of all the
 tables in the *lahmanbasebald* schema. Note: entering % is not strictly
@@ -412,8 +386,7 @@ if you do not limit the search.
 ***Figure C.7***
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image21.jpeg){width="3.27619750656168in"
-height="2.14457895888014in"}
+generated](./media/image21.jpeg)
 
 and then press the \>\> button to move all of the tables from the
 Results list into the Selected Tables list. Note that we also had the
@@ -423,8 +396,7 @@ from the Results list.
 ***Figure C.8***
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image22.jpeg){width="3.0120483377077867in"
-height="1.9996675415573053in"}
+generated](./media/image22.jpeg)
 
 Click "OK" and you job is ready to execute.
 
@@ -433,16 +405,14 @@ Click "Save" Icon
 ***Figure C.9***
 
 ![A screenshot of a social media post Description automatically
-generated](./media/image23.jpeg){width="3.957831364829396in"
-height="1.8855358705161855in"}
+generated](./media/image23.jpeg)
 
 Press "Run" Icon.
 
 ***Figure C.10***
 
 ![A screenshot of a social media post Description automatically
-generated](./media/image24.jpeg){width="4.0in"
-height="1.9004516622922134in"}
+generated](./media/image24.jpeg)
 
 ### **Part 2-- Test Initial Load and Verify Data Movements to Azure Databricks**
 
@@ -454,8 +424,7 @@ Below is a what you should see on Qlik Replicate Task Manager
 ***Figure C.11***
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image25.jpeg){width="3.6224332895888014in"
-height="1.7891568241469815in"}
+generated](./media/image25.jpeg)
 
 Below is what you see on Azure Databricks Database by Clicking Data
 button and Clicking on Tables.
@@ -463,14 +432,13 @@ button and Clicking on Tables.
 ***Figure C.12***
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image26.jpeg){width="1.6396073928258967in"
-height="2.301205161854768in"}
+generated](./media/image26.jpeg)
+
 
 ***Figure C.13***
 
 ![A screenshot of a computer Description automatically
-generated](./media/image27.jpeg){width="3.716867891513561in"
-height="1.7615409011373577in"}
+generated](./media/image27.jpeg)
 
 ### **Part 3 -- Test Changes and Verify Delta Movements to Azure Databricks**
 
@@ -497,13 +465,11 @@ Verify the Changes in Attunity Task Monitor 1 row has been updated.
 ***Figure C.14***
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image28.jpeg){width="6.5in"
-height="3.217361111111111in"}
+generated](./media/image28.jpeg)
 
 Verify the Changes in Azure Databricks.
 
 ***Figure C.15***
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image29.jpeg){width="6.5in"
-height="1.0326388888888889in"}
+generated](./media/image29.jpeg)
