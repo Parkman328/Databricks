@@ -371,7 +371,7 @@ Once you have completed configuring the Databricks endpoint, click on "Test Conn
 
 **_Figure B.4.0_**
 
-![Databricks Azure Success Image](./media/image25.png)
+![](./media/image25.png)
 
 Assuming so, click "Save" and the configuration of your Databricks on Azure target endpoint is complete. Click "Close" to close the window.
 
