@@ -8,16 +8,15 @@
 <br>
 <br>
 <br>
-
 John Park<br>
 Principal Solution Architect<br>
 john.park@qlik.com
 
+![](./media/image2.png)
 
 **Version: 1.1**<br>
 **Initial Release Date: 17-Feb-20**<br><br><br><br>
 
-![](./media/image2.png)
 
 **Revisions**      | **Notes**   | **Date**  | **Version**
 ------------------ | ----------- | --------- | -----------
@@ -220,20 +219,17 @@ Execute the following Code:
 
 **_Figure B.4.1_**
 
+```
+%sql
+drop database if exists  <database-name>;
 create database <database-name> location '<mount-point>';</mount-point></database-name>
+```
 
-<database-name\>;</database-name\>
 
-create database \
-
-<database-name\> location \'\<mount-point\>\';</mount-point\></database-name\>
-
+ 
 where:
 
-- \
-
-  <database-name\> is the name of the database you want to create;
-  and</database-name\>
+- <database-name> is the name of the database you want to create; and</database-name\>
 
 - \
 
