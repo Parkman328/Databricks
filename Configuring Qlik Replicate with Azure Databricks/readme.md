@@ -224,8 +224,6 @@ Execute the following Code:
 drop database if exists  <database-name>;
 create database <database-name> location '<mount-point>';</mount-point></database-name>
 ```
-
-
  
 where:
 
@@ -263,7 +261,7 @@ First things first, we need to do is open Qlik Replicate. Click the Qlik Replica
 
 Once you are logged in you will see the main screen for Qlik Replicate.
 
-**_Figure C.1.0_**
+**_Figure B.1.0_**
 
 ![Replicate Main Image](./media/image16.png)
 
@@ -271,11 +269,11 @@ Once you are logged in you will see the main screen for Qlik Replicate.
 
 The first thing we need to do is create a target endpoint. We do this by clicking the "Manage Endpoint Connections" button at the top of the screen.
 
-**_Figure C.1.1_**
+**_Figure B.1.1_**
 
 ![Manage Endpoints Image](./media/image17.png)
 
-**_Figure C.1.2_**
+**_Figure B.1.2_**
 
 ![Add New Endpoint
 Image](./media/image18.png)
@@ -284,7 +282,7 @@ From there, click on "Add New Endpoint Connection" link or the + "New Endpoint C
 
 Once you do that you will see this window:
 
-**_Figure C.1.3_**
+**_Figure B.1.3_**
 
 ![New Endpoint Image](./media/image19.png)
 
@@ -294,7 +292,7 @@ We will now create a Databricks Target endpoint:
 
 - Select "Microsoft Azure Databricks" from the dropdown selection box.
 
-**_Figure C.1.4_**
+**_Figure B.1.4_**
 
 ![Databricks Azure 1
 Image](./media/image20.png)
@@ -305,14 +303,14 @@ Replicate creates external tables in the Databricks metadata store using ODBC, a
 
 Replicate supports delivering the data for the external tables into Azure Blob Storage as well as into Azure Data Lake Storage (ADLS) Gen2\. In either case, the storage location must be accessible from the Replicate server, and obviously must have write access as well. Further, in order for Databricks to be able to access the data, the storage that Replicate writes to needs to be mounted on the Databricks File System (DBFS).
 
-**_Figure C.1.5_**
+**_Figure B.2.0_**
 
 ![Databricks Azure Storage Options
 Image](./media/image21.png)
 
 _Please note Replicate only supports writing data to Blob Storage when Replicate is running on a Windows Server_.
 
-**_Figure C.1.6_**
+**_Figure B.2.1_**
 
 ![Databricks Azure adlsGen2 Config
 Image](./media/image22.png)
@@ -333,7 +331,7 @@ Fill in the blanks related to ADLS Gen2 storage with information specific to you
 
 > _Note: if you specify a folder that does not exist, Replicate will create it for you. You may also press "_Browse" _to find directories in your file system that you may choose from. If you created a directory as the guide suggested in the 'Configure Azure Data Lake Gen2 Storage' section, you will see that directory listed when you press browse._
 
-**_Figure C.1.7_**
+**_Figure B.2.2_**
 
 ![Databricks Azure adlsGen2 Config 2
 Image](./media/image23.png)
@@ -342,7 +340,7 @@ Image](./media/image23.png)
 
 Now click on the arrow (>) next to "Databricks ODBC Access":
 
-**_Figure C.1.7_**
+**_Figure B.3.0_**
 
 ![Databricks Azure ODBC Config
 Image](./media/image24.png)
@@ -371,7 +369,7 @@ _\_
 
 Once you have completed configuring the Databricks endpoint, click on "Test Connection". Your connection window should look like the following, indicating that your connection succeeded.
 
-**_Figure C.1.8_**
+**_Figure B.4.0_**
 
 ![Databricks Azure Success Image](./media/image25.png)
 
