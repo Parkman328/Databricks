@@ -29,6 +29,7 @@ Edits for Markdown | 25-Feb-2020 | John Park | 1.1         |
 # Table of Contents
 -------------------
 [**Summary**](#summary)
+
 [**Section A - Verify Connections for Qlik Compose**](#section-a---verify-connections-for-qlik-compose)
 
 [**Part 1 -- Starting Point for this Tutorial**](#part-1----starting-point-for-this-tutorial)
