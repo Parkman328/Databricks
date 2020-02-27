@@ -28,6 +28,24 @@ Edits for Markdown | 25-Feb-2020 | John Park | 1.1         |
 
 # Table of Contents
 -------------------
+[**Summary**](#summary)
+[**Section A - Verify Connections for Qlik Compose**](#section-a---verify-connections-for-qlik-compose)
+
+[**Part 1 -- Starting Point for this Tutorial**](#part-1----starting-point-for-this-tutorial)
+
+[**Section B - Move Data from Landing to Storage Using Compose**](#section-b---move-data-from-landing-to-storage-using-compose)
+
+[**Part 1 - Add New Entity**](#part-1---add-new-entity)
+
+[**Part 2 - Create Tasks for Compose**](#part-2---create-tasks-for-compose)
+
+[**Part 3 - View Tasks from Monitor and Run Tasks**](#part-3---view-tasks-from-monitor-and-run-tasks)
+
+[**Section C - Use Lookup and Created Curated Table for Data Lake**](#section-c---use-lookup-and-created-curated-table-for-data-lake)
+
+[**Part 1 - Create a New Entity in Storage Zone**](#part-1---create-a-new-entity-in-storage-zone)
+
+[**Section D - Verify Data Movement and Changes in Azure Databricks**](#section-d---verify-data-movement-and-changes-in-azure-databricks)
 
 
 ## **Summary**
@@ -336,13 +354,13 @@ Click the "Metadata" Button in Storage Zone
 
 Click "+New Entity" button
 
-***Figure C.0.1***
+***Figure C.1.0***
 
 ![](./media/image28.jpeg)
 
 Add New Entity and use a name like "player_hof"
 
-***Figure C.0.2***
+***Figure C.1.1***
 
 ![](./media/image29.png)
 
@@ -352,13 +370,13 @@ attributes.
 1.  "namefirst", "nameLast" and "playerID" can be added with lookup with
     Attribute Domain
 
-    ***Figure C.0.3***
+    ***Figure C.1.2***
 
     ![A screenshot of a cell phone Description automatically
     generated](./media/image30.png)
 2.  Using the "+" button define new attributes "hof"
 
-    ***Figure C.0.4***
+    ***Figure C.1.3***
 
     ![A screenshot of a cell phone Description automatically
     generated](./media/image31.jpeg)
@@ -369,7 +387,7 @@ attributes.
 
 This is what your "Manage Metadata" screen should look like
 
-***Figure C.0.5***
+***Figure C.1.4***
 
 ![](./media/image32.jpeg)
 Go to Main Screen and Validate Storage Zone
@@ -379,16 +397,16 @@ Go to Main Screen and Validate Storage Zone
 Press Validate and Let Qlik Compose adjust Storage. Press "Adjust
 Automatically"
 
-***Figure C.0.6***
+***Figure C.1.5***
 
 ![](./media/image34.jpeg)
 
-***Figure C.0.7***
+***Figure C.1.6***
 
 ![](./media/image35.png)
 Press Data Storage Tasks
 
-**Figure C.0.8**
+***Figure C.1.7***
 
 ![](./media/image36.jpeg)
 
@@ -401,40 +419,47 @@ Name Task something unique.
 Create a new Task with no Change Processing since this is a Full Load
 and no history needs to be kept.
 
-**Figure C.0.9**
+***Figure C.1.8***
 
 ![](./media/image37.jpeg)
 In the Mapping Area press "+ New Mapping"
 
-**Figure C.0.10**
+***Figure C.1.9***
 
 ![](./media/image38.jpeg)
 Edit Mapping Screen will appear.
 
+***Figure C.1.10***
 ![](./media/image39.jpeg)
 
 Bring in people Table and press "Auto-Map" playerID, namefirst, and
 namelast will auto map.
 
+***Figure C.1.11***
 ![](./media/image40.jpeg)
 
 Press the Lookup Icon for 'hof'
 
+***Figure C.1.12***
 ![](./media/image41.jpeg)
 
 For hof use "halloffame" table as lookup and place "inducted" attribute
 hof
 
+***Figure C.1.13***
 ![](./media/image42.jpeg)
 Lookup Transformation should look like the following
 
+***Figure C.1.14***
 ![](./media/image43.png)
 
 Go to main screen and Validate Storage Zone again. This time Storage
 zone will be different than Metadata. Generate Adjust Script.
 
+***Figure C.1.15***
 ![](./media/image44.jpeg)  
 
+***Figure C.1.16***
 ![](./media/image45.jpeg)
 
 Copy Adjust Script and execute in Azure Databricks Notes with needed
@@ -442,16 +467,18 @@ adjustments.
 
 Click Validate and Resync
 
+***Figure C.1.17***
 ![](./media/image46.jpeg)
 
-Go Into "Manage Data Storage Tasks" and Generate for "Load-Hall-Of-Fame"
-Task
+Go Into "Manage Data Storage Tasks" and Generate for "Load-Hall-Of-Fame" Task
 
+***Figure C.1.18***
 ![](./media/image47.png)
 
-Go to Monitor and Execute "Load-Hall-Of-Fame" Task ![A screenshot of a
-computer Description automatically
-generated](./media/image48.jpeg)
+Go to Monitor and Execute "Load-Hall-Of-Fame" Task 
+
+***Figure C.1.19***
+![](./media/image48.jpeg)
 At this point you have moved 5 Entities or DataSets into Managed Data
 Lake.
 
@@ -468,8 +495,11 @@ By accessing Azure Databricks Portal you should validated following
 
 -   Creation player_hof table and column hof populated properly
 
+***Figure D.0.1***  
 ![](./media/image49.jpeg)
 
+***Figure D.0.2***
 ![](./media/image50.jpeg)
 
+***Figure D.0.3***
 ![](./media/image51.jpeg)
