@@ -8,12 +8,14 @@
 <br>
 <br>
 <br>
-
 John Park<br>
 Principal Solution Architect<br>
 john.park@qlik.com
 
-**Version: 1.1**
+![](./media/image2.png)
+
+**Version: 1.1**<br>
+**Initial Release Date: 17-Feb-20**<br><br><br><br>
 
 **Revisions**      | **Notes**   | **Date**  | **Version**
 ------------------ | ----------- | --------- | -----------
@@ -22,15 +24,17 @@ Review of Language | 20-Feb-2020 | John Park | 0.2         |
 Final Edit for V1  | 21-Feb-2020 | John Park | 1.0         |
 Edits for Markdown | 25-Feb-2020 | John Park | 1.1         |
 
+--------------------------------------------------------------------------------
+
 # Table of Contents
 
-[Summary](#summary)
+[**Summary**](#summary)
 
-[Section A - Configuring Azure Components](#section-a---configuring-azure-components)
+[**Section A - Configuring Azure Components**](#section-a---configuring-azure-components)
 
-[Section B - Configuring Qlik Compose for Data Lakes](#section-b---configuring-qlik-compose-for-data-lakes)
+[**Section B - Configuring Qlik Compose for Data Lakes**](#section-b---configuring-qlik-compose-for-data-lakes)
 
-[Section C - Connecting Qlik Compose with Qlik Replicate](#section-c-connecting-qlik-compose-with-qlik-replicate)
+[**Section C - Connecting Qlik Compose with Qlik Replicate**](#section-c-connecting-qlik-compose-with-qlik-replicate)
 
 ## **Summary**
 
@@ -38,17 +42,21 @@ This document was created to supplement Qlik Compose Documentation for customers
 
 - <https://help.qlik.com/en-US/compose/Content/Compose/Home.htm>
 
-## **Section A - Configuring Azure Components**
+## **Section A - Configuring Azure DatabricksComponents**
 
 **High Level Overview**
 
-- Create or Configure Azure Data Lake Storage (ADLS) Gen2
+- Create or Configure Azure Data Lake Storage (ADLS) Gen2  
+_Log into Azure Portal and Create Storage Account with ADLSv2 Hierachical Storage Enabled._
 
-- Create Azure Active Directory Application
+- Create Azure Active Directory Application  
+_Using Azure Active Directory register and the account for access on thrird party tools._
 
-- Create ADLS File System and Folder
+- Create ADLS File System and Folder  
+_Using Storage Explorer setup containers filesystems and folders._
 
-The Detailed Instruction can be found in Accompanying Documentation "Configuring Replicate with Azure Databricks"
+
+_The Detailed Instruction can be found in Accompanying Documentation ![Configuring Replicate with Azure Databricks]//Place Link ***_
 
 ## **Section B - Configuring Qlik Compose for Data Lakes**
 
