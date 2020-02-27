@@ -53,23 +53,23 @@ Edits for Markdown | 25-Feb-2020 | John Park | 1.1         |
 
 [**Part 4 - Test and Save**](#part-4---test-and-save)
 
-
-
 ## **Summary**
 
-This document was created to supplement Qlik Replicate Documentation for customers intending to Qlik Replicate and Azure Databricks. The Office Documentation can be found at <https://help.qlik.com/en-US/replicate/Content/Replicate/Home.htm>.
+This document was created to supplement Qlik Replicate Documentation for customers intending to Qlik Replicate and Azure Databricks. The Office Documentation can be found at 
+
+- <https://help.qlik.com/en-US/replicate/Content/Replicate/Home.htm>.
 
 ## **Section A - Configuring Azure Databricks Components**
 
-> **High Level Overview**
+ **High Level Overview**
 
-- **Download and Install Databricks ODBC Driver**
+- Download and Install Databricks ODBC Driver
 
-- **Create Databricks Token and Edit Spark Configuration**
+- Create Databricks Token and Edit Spark Configuration**
 
-- **Execute Code to Mount Data Drive**
+- Execute Code to Mount Data Drive
 
-- **Create Databricks DB and Collect ODBC Settings**
+- Create Databricks DB and Collect ODBC Settings
 
 At this point Azure Data Lake Storage account and Active Directory settings we need should be configured, we need to configure Azure Databricks so that it can make use of that storage. We also need to do a configure few things to prepare Azure Databricks to accept data loaded by Qlik Replicate. _Please refer to "Configuring Azure ADLSv2 for Qlik Data Integration" guide for ADLSv2 Instructions._
 

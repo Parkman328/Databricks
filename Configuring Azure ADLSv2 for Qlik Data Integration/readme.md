@@ -12,14 +12,13 @@
 John Park<br>
 Principal Solution Architect<br>
 john.park@qlik.com<br>
+![](./media/image2.png)  
 
 **Version: 1.1**<br>
 **Initial Release Date: 17-Feb-20**
 
-![](./media/image2.png)<br>
-<br>
-<br>
-<br>
+
+
 
 **Revisions**      | **Notes**   | **Date**  | **Version**
 ------------------ | ----------- | --------- | -----------
@@ -30,17 +29,17 @@ Edits for Markdown | 25-Feb-2020 | John Park | 1.1         |
 
 # Table of Contents
 
-[Summary](#summary)
+[**Summary**](#summary)
 
-[Configuring Azure Components](#configuring-azure-components)
+[**Configuring Azure Components**](#configuring-azure-components)
 
-[Part 1 - Create or Configure Azure Data Lake Storage (ADLS) Gen2](#part-1---create-or-configure-azure-data-lake-storage-adls-gen2)
+[**Part 1 - Create or Configure Azure Data Lake Storage (ADLS) Gen2**](#part-1---create-or-configure-azure-data-lake-storage-adls-gen2)
 
-[Part 2 - Create an Active Directory "App Registration"](#part-2---create-an-active-directory-and-perform-app-registration)
+[**Part 2 - Create an Active Directory "App Registration"**](#part-2---create-an-active-directory-and-perform-app-registration)
 
-[Part 3 - Finalizing Configuration of the ADLS-2 Storage Account](#part-3---finalizing-configuration-of-the-adls-2-storage-account)
+[**Part 3 - Finalizing Configuration of the ADLS-2 Storage Account**](#part-3---finalizing-configuration-of-the-adls-2-storage-account)
 
-[Part 4 - Create a Target Directory in the File System](#part-4---create-a-target-directory-in-the-file-system)
+[**Part 4 - Create a Target Directory in the File System**](#part-4---create-a-target-directory-in-the-file-system)
 
 ## **Summary**
 
