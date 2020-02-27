@@ -31,27 +31,29 @@ Edits for Markdown | 25-Feb-2020 | John Park | 1.1         |
 
 # Table of Contents
 
-[Summary](#summary)
+[**Summary**](#summary)
 
-[Section A - Configuring Azure Databricks Components](#section-a---configuring-azure-databricks-components)
+[**Section A - Configuring Azure Databricks Components**](#section-a---configuring-azure-databricks-components)  
 
-[Part 1 - Download and Install Databricks ODBC Driver](#part-1---download-and-install-databricks-odbc-driver)
+[**Part 1 - Download and Install Databricks ODBC Driver**](#part-1---download-and-install-databricks-odbc-driver)   
 
-[Part 2 - Create Databricks Token and Edit Spark Configuration](#part-2---create-databricks-token-and-edit-spark-configuration)
+[**Part 2 - Create Databricks Token and Edit Spark Configuration**](#part-2---create-databricks-token-and-edit-spark-configuration)  
 
-[Part 3 - Execute Code to Mount Data Drive](#part-3---execute-code-to-mount-data-drive)
+[**Part 3 - Execute Code to Mount Data Drive**](#part-3---execute-code-to-mount-data-drive)  
 
-[Part 4 - Create Databricks DB and Collect ODBC Settings](#part-4---create-databricks-db-and-collect-odbc-settings)
+[**Part 4 - Create Databricks DB and Collect ODBC Settings**](#part-4---create-databricks-db-and-collect-odbc-settings)    
+ 
+[**Section B - Configure Azure Databricks connection on Qlik Replicate**](#section-b---configure-azure-databricks-connection-on-qlik-replicate)  
 
-[Section B - Configuring Azure Databricks connection on Qlik Replicate](#section-b---configuring-azure-databricks-components)
+[**Part 1 - Create Microsoft Azure Databricks Endpoint Connection**](#part-1---create-microsoft-azure-databricks-endpoint-connection) 
 
-[Part 1 - Create Microsoft Azure Databricks Endpoint Connection](#part-1---create-microsoft-azure-databricks-endpoint-connection)
+[**Part 2 - Azure Storage Configuration**](#part-2---azure-storage-configuration)
 
-[Part 2 - Azure Storage Configuration](#part-2---azure-storage-configurationto-optimize-delivery-into-the-databricks-environment-replicate-delivers-change-data-in-a-continual-series-of-micro-batches-that-are-staged-for-bulk-ingest.-you-can-configure-the-databricks-on-azure-endpoint-to-stage-the-data-files-on-databricks-i.e.-internally-or-on-amazon-s3.)
+[**Part 3 - Databricks ODBC Access Configuration**](#part-3---databricks-odbc-access-configuration)
 
-[Part 3 - Databricks ODBC Access Configuration](#part-3---databricks-odbc-access-configuration)
+[**Part 4 - Test and Save**](#part-4---test-and-save)
 
-[Part 4 - Test and Save](#part-4---test-and-save)
+
 
 ## **Summary**
 
@@ -299,7 +301,8 @@ Image](./media/image20.png)
 
 Replicate creates external tables in the Databricks metadata store using ODBC, and when running Full Load and Store Changes tasks, it writes the files to Azure storage. Similar to other endpoints, Replicate creates change data partitions in the Partition Control Table and in the metadata store.
 
-### **Part 2 - Azure Storage Configuration**To optimize delivery into the Databricks environment, Replicate delivers change data in a continual series of micro batches that are staged for bulk ingest. You can configure the Databricks on Azure endpoint to stage the data files on Databricks (i.e. internally) or on Amazon S3.
+### **Part 2 - Azure Storage Configuration**  
+To optimize delivery into the Databricks environment, Replicate delivers change data in a continual series of micro batches that are staged for bulk ingest. You can configure the Databricks on Azure endpoint to stage the data files on Databricks (i.e. internally) or on Amazon S3.
 
 Replicate supports delivering the data for the external tables into Azure Blob Storage as well as into Azure Data Lake Storage (ADLS) Gen2\. In either case, the storage location must be accessible from the Replicate server, and obviously must have write access as well. Further, in order for Databricks to be able to access the data, the storage that Replicate writes to needs to be mounted on the Databricks File System (DBFS).
 
