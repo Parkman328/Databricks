@@ -11,7 +11,7 @@
 
 John Park<br>
 Principal Solution Architect<br>
-john.park@qlik.com
+john.park@qlik.com<br>
 
 **Version: 1.1**<br>
 **Initial Release Date: 17-Feb-20**

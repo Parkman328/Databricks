@@ -83,7 +83,7 @@ Please refer to Databricks Documentation and setup ODBC Driver for Windows/Linux
 
 ### **Part 2 - Create Databricks Token and Edit Spark Configuration**
 
-### Replicate uses a Databricks "access token" to access Databricks. The first thing we will do is create one. This is done from the "User Settings" drop down of the workspace.
+Qlik Replicate uses a Databricks  **_"access token"_** to access Databricks. The first thing we will do is create an ***_"access token"_***. This is done from the ***_"User Settings"_*** drop down of the workspace.
 
 **_Figure A.2.0_**
 
