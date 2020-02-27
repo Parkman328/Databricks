@@ -447,19 +447,10 @@ Azure Databricks Database.
 
 Alter Player Table by Adding new Player
 
-***INSERT INTO \`lahmansbaseballdb\`.\`people\` (\`playerID\`,
-\`birthYear\`, \`birthMonth\`, \`birthDay\`, \`birthCountry\`,
-\`birthState\`, \`birthCity\`, \`deathYear\`, \`deathMonth\`,
-\`deathDay\`, \`deathCountry\`, \`deathState\`, \`deathCity\`,
-\`nameFirst\`, \`nameLast\`, \`nameGiven\`, \`weight\`, \`height\`,
-\`bats\`, \`throws\`, \`debut\`, \`finalGame\`, \`retroID\`,
-\`bbrefID\`, \`birth\_date\`, \`debut\_date\`, \`finalgame\_date\`,
-\`death\_date\`) VALUES (\'parkjo01\', \'1980\', \'3\', \'2\', \'USA\',
-\'GA\', \'Lilburn\', \'2043\', \'03\', \'2\', \'USA\', \'FL\',
-\'Ocala\', \'John\', \'Park\', \'John Park\', \'205\', \'73\', \'R\',
-\'R\', \'1995-09-10\', \'1987-09-27\', \'parkj101\', \'parkjo01\',
-\'1980-03-02\', \'1987-09-10\', \'1995-09-27\', \'2043-11-15\')***
-
+```
+INSERT INTO `lahmansbaseballdb`. `people` (`playerID`, `birthYear`,  `birthMonth`,  `birthDay`,  `birthCountry`,`birthState`,  `birthCity`,  `deathYear`,  `deathMonth`, `deathDay`, `deathCountry`, `deathState`, `deathCity`, `nameFirst`, `nameLast`, `nameGiven`, `weight`, `height`, `bats`, `throws`, `debut`, `finalGame`, `retroID`,`bbrefID`, `birth_date`, `debut_date`, `finalgame_date`, `death_date`) 
+VALUES ('parkjo01', '1980', '3', '2', 'USA','GA', 'Lilburn', '2043', '03', '2', 'USA', 'FL','Ocala', 'John', 'Park', 'John Park', '205', '73', 'R','R', '1995-09-10', '1987-09-27', 'parkj101', 'parkjo01','1980-03-02', '1987-09-10', '1995-09-27', '2043-11-15')
+```
 Verify the Changes in Attunity Task Monitor 1 row has been updated.
 
 ***Figure C.14***
