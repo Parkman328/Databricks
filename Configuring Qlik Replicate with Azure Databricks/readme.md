@@ -4,17 +4,17 @@
 
 ## **Partner Engineering**
 
-<br><br><br><br>
+<br>
+<br>
+<br>
+<br>
 
 John Park<br>
 Principal Solution Architect<br>
 john.park@qlik.com
 
 **Version: 1.1**<br>
-**Initial Release Date: 17-Feb-20**<br>
-<br>
-<br>
-<br>
+**Initial Release Date: 17-Feb-20**<br><br><br><br>
 
 ![](./media/image2.png)
 
@@ -33,23 +33,25 @@ Edits for Markdown | 25-Feb-2020 | John Park | 1.1         |
 
 [Summary](#summary)
 
-[Configuring Azure Databricks Components](#section-a---configuring-azure-databricks-components)
+[Section A - Configuring Azure Databricks Components](#section-a---configuring-azure-databricks-components)
 
 [Part 1 - Download and Install Databricks ODBC Driver](#part-1---download-and-install-databricks-odbc-driver)
 
 [Part 2 - Create Databricks Token and Edit Spark Configuration](#part-2---create-databricks-token-and-edit-spark-configuration)
 
-[Part 3 - Execute Code to Mount Data Drive 10](#part-3---execute-code-to-mount-data-drive)
+[Part 3 - Execute Code to Mount Data Drive](#part-3---execute-code-to-mount-data-drive)
 
-[**Part 4 - Create Databricks DB and Collect ODBC Settings** 12](#part-4---create-databricks-db-and-collect-odbc-settings)
+[Part 4 - Create Databricks DB and Collect ODBC Settings](#part-4---create-databricks-db-and-collect-odbc-settings)
 
-[**Part 1 - Create Microsoft Azure Databricks Endpoint Connection** 16](#part-1---create-microsoft-azure-databricks-endpoint-connection)
+[Section B - Configuring Azure Databricks connection on Qlik Replicate](#section-b---configuring-azure-databricks-components)
 
-[**Part 2 - Azure Storage Configuration**To optimize delivery into the Databricks environment, Replicate delivers change data in a continual series of micro batches that are staged for bulk ingest. You can configure the Databricks on Azure endpoint to stage the data files on Databricks (i.e. internally) or on Amazon S3\. 18](#part-2---azure-storage-configurationto-optimize-delivery-into-the-databricks-environment-replicate-delivers-change-data-in-a-continual-series-of-micro-batches-that-are-staged-for-bulk-ingest.-you-can-configure-the-databricks-on-azure-endpoint-to-stage-the-data-files-on-databricks-i.e.-internally-or-on-amazon-s3.)
+[Part 1 - Create Microsoft Azure Databricks Endpoint Connection](#part-1---create-microsoft-azure-databricks-endpoint-connection)
 
-[**Part 3 - Databricks ODBC Access Configuration** 21](#part-3---databricks-odbc-access-configuration)
+[Part 2 - Azure Storage Configuration](#part-2---azure-storage-configurationto-optimize-delivery-into-the-databricks-environment-replicate-delivers-change-data-in-a-continual-series-of-micro-batches-that-are-staged-for-bulk-ingest.-you-can-configure-the-databricks-on-azure-endpoint-to-stage-the-data-files-on-databricks-i.e.-internally-or-on-amazon-s3.)
 
-[**Part 4 - Test and Save** 23](#part-4---test-and-save)
+[Part 3 - Databricks ODBC Access Configuration](#part-3---databricks-odbc-access-configuration)
+
+[Part 4 - Test and Save](#part-4---test-and-save)
 
 ## **Summary**
 
@@ -71,9 +73,7 @@ At this point Azure Data Lake Storage account and Active Directory settings we n
 
 Everything we do in this section of the setup will be done from your Databricks workspace, so go ahead and log in to Databricks from Azure Portal.
 
-**_Figure A.0.1_**
-
-### ![Azure Databricks Config 1 Image](./media/image3.png){width="6.5in" height="3.265972222222222in"}
+**_Figure A.0.1_** ![](./media/image3.png)
 
 ### **Part 1 - Download and Install Databricks ODBC Driver**
 
@@ -87,57 +87,54 @@ Please refer to Databricks Documentation and setup ODBC Driver for Windows/Linux
 
 **_Figure A.2.0_**
 
-![Azure Databricks Config 2 Image](./media/image4.png){width="6.5in" height="2.4in"}
+![](./media/image4.png)
 
 From "User Settings" select the "Access Tokens" tab and then Press "Generate New Token".
 
 **_Figure A.2.1_**
 
-![Azure Databricks Config 3 Image](./media/image5.png){width="6.5in" height="1.9986111111111111in"}
+![](./media/image5.png)
 
 Enter a comment and select "Generate".
 
 **_Figure A.2.2_**
 
-![Azure Databricks Config 4 Image](./media/image6.png){width="6.5in" height="2.25625in"}
+![](./media/image6.png)
 
 Please make sure to copy the Token value and save the generated token off now. You will not be able to retrieve it later.
 
 **_Figure A.2.3_**
 
-![Azure Databricks Config 5 Image](./media/image7.png){width="6.5in" height="2.183333333333333in"}
+![](./media/image7.png)
 
 **_Figure A.2.4_**
 
-![Azure Databricks Config 6 Image](./media/image8.png){width="6.5in" height="1.4861111111111112in"}
-
+![](./media/image8.png)<br>
 Edit the Spark Configuration
-
-The _Spark Config_ section of you Databricks cluster configuration must contain the line "spark.hadoop.hive.server2.enable.doAs false" when using ADLS Gen2 storage.
 
 First select the cluster we will be using for this test drive by clicking on "Cluster" Icon on left side of screen.
 
 **_Figure A.2.5_**
 
-![Azure Databricks Config 7 Image](./media/image9.png){width="6.5in" height="2.5625in"}
+![Azure Databricks Config 7 Image](./media/image9.png)
 
 We need to make a change, so select "Edit" button.
 
 **_Figure A.2.6_**
 
-![Azure Databricks Config 8 Image](./media/image10.png){width="6.5in" height="1.6506944444444445in"}
+![Azure Databricks Config 8 Image](./media/image10.png)
 
 Now scroll down,
 
-- select > "Advanced Options"
+- Select > "Advanced Options"
 
-- select the "Spark" tab
+- Select the "Spark" tab
 
-- enter the string "spark.hadoop.hive.server2.enable.doAs false" in the Spark Config section.
+- Enter the string `"spark.hadoop.hive.server2.enable.doAs false"` in the Spark Config section.
 
 **_Figure A.2.6_**
 
-![Spark Config Image](./media/image11.png){width="5.305984251968504in" height="5.754385389326334in"}
+![Spark Config Image](./media/image11.png)
 
 and then click "Confirm and Restart" button at the top of the page.
 
@@ -149,7 +146,8 @@ Open a Notebook and execute the following python command:
 
 **_Figure A.3.0_**
 
-\%python
+```
+%python
 
 configs = {\"fs.azure.account.auth.type\": \"OAuth\",
 
@@ -183,51 +181,31 @@ mount_point = \"/mnt/\
 <mount-name\>\",</mount-name\>
 
 extra_configs = configs)
+```
 
 where:
 
-- \
+- <application-id\> is the Azure Active Directory Application (client) ID we made note of earlier.(Fig</application-id\>
 
-  <application-id\> is the Azure Active Directory Application
-  (client) ID we made note of earlier.(Fig</application-id\>
+- <client-secret\> is the Azure Active Directory Application (client) Key we created.</client-secret\>
 
-- \
-
-  <client-secret\> is the Azure Active Directory Application (client)
-  Key we created.</client-secret\>
-
-- \
-
-  <directory-id\> is the Azure Active Directory ID (tenant ID).</directory-id\>
+- <directory-id\> is the Azure Active Directory ID (tenant ID).</directory-id\>
 
 - _source_ is the file system at target folder that will contain the data delivered by replicate.
 
-  - \
+- <file-system-name\> is the ADLS-2 file system we are using.</file-system-name\>
 
-    <file-system-name\> is the ADLS-2 file system we are using.</file-system-name\>
+- <storage-account-name\> is the ADLS-2 storage account we are using.</storage-account-name\>
 
-  - \
+- <directory-name\> is the name of the directory in the file system we will be writing to.</directory-name\>
 
-    <storage-account-name\> is the ADLS-2 storage account we are
-    using.</storage-account-name\>
+- <mount-name\> is where the <em>source</em> is mounted in Databricks. This will be used later by Replicate.</mount-name\>
 
-  - \
-
-    <directory-name\> is the name of the directory in the file
-    system we will be writing to.</directory-name\>
-
-- \
-
-  <mount-name\> is where the <em>source</em> is mounted in Databricks. This
-  will be used later by Replicate.</mount-name\>
-
-> **_If this fails please check your azure storage account network settings._**
+> ### **_If this fails please check your azure storage account network settings._**
 
 **_Figure B.3.1_**
 
-![Azure Databricks Config 9 Image](./media/image12.png){width="6.5in" height="3.127083333333333in"}
-
-_\_
+![](./media/image12.png) _\_
 
 ## **Part 4 - Create Databricks DB and Collect ODBC Settings**
 
@@ -235,8 +213,7 @@ Add Additional Cell in the Databricks Notebook by clicking on Down Arrow and sel
 
 **_Figure B.4.0_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image13.png){width="2.986111111111111in" height="4.625in"}
+![](./media/image13.png)
 
 Execute the following Code:
 
@@ -397,12 +374,11 @@ _\_
 
 ### **Part 4 - Test and Save**
 
-Once you have completed configuring the Databricks endpoint, click on "Test Connection". Your screen should look like the following, indicating that your connection succeeded.
+Once you have completed configuring the Databricks endpoint, click on "Test Connection". Your connection window should look like the following, indicating that your connection succeeded.
 
 **_Figure C.1.8_**
 
-![Databricks Azure Success
-Image](./media/image25.png)
+![Databricks Azure Success Image](./media/image25.png)
 
 Assuming so, click "Save" and the configuration of your Databricks on Azure target endpoint is complete. Click "Close" to close the window.
 
