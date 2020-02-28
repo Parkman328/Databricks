@@ -148,7 +148,9 @@ Registration is almost immediate. Make note of the location of the "Application 
 Next, we need to grant this application some basic permissions. Click on _API permissions_ on the left side of the page.
 
 ***Figure A.2.5***<br>
-![](./media/image14.jpg) Click "_+ Add permission"_ followed by _Azure Data Lake_ under "Microsoft APIs" on the right side of the screen.
+![](./media/image14.png) 
+
+Click "_+ Add permission"_ followed by _Azure Data Lake_ under "Microsoft APIs" on the right side of the screen.
 
 ***Figure A.2.6*** ![](./media/image15.jpeg)
 
@@ -157,7 +159,7 @@ Next, we need to grant this application some basic permissions. Click on _API pe
 
 From there, check "user_impersonation" under "Delegated permissions" and then press "Add permissions" button at the bottom of the page
 
-***Figure A.2.8***!
+***Figure A.2.8***
 [](./media/image17.jpg)   
 
 Now we need to create a "secret" (essentially a password) for this API. Click on "Certificates & secrets" on the left side of the screen and click on "+ New client secret".***Figure A.2.9*** ![](./media/image18.jpg)
