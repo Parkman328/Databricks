@@ -1,6 +1,6 @@
 # ***Qlik and Databricks***
 
-This Repo Contains Documentaiin, Code and Notes on Qlik Partnership with Databricks
+This Repo Contains Documentation, Code and Notes on Qlik Partnership with Databricks
 
 The Author of this Repository 
 John Park  
