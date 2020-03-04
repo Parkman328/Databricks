@@ -70,20 +70,18 @@ At this point Qlik Compose is setup and license are put in ready to go. You shou
 
 **_Figure B.0.1_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image3.jpeg) Qlik Compose for Data Lakes is ready start. Click "Add New Project"
+![](./media/image3.jpeg)   
+Qlik Compose for Data Lakes is ready start. Click "Add New Project"
 
 **_Figure B.0.2_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image4.png)
+![](./media/image4.png)
 
 Click on Databricks as Engine for this Project.
 
 **_Figure B.0.3_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image5.png)
+![](./media/image5.png)
 
 We will configure landing and storage areas of Data lake to Use ADLSv2 and Databricks Delta.
 
@@ -91,34 +89,29 @@ For Clarification Landing is where the Data is landed or ingested via a mechanis
 
 **_Figure B.0.4_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image6.jpg)
+![](./media/image6.jpg)
 
 For Storage are we will use a different container inside ADLSv2 container. For our case we logged on to Azure portal and created a new container inside storage account called "compose".
 
 **_Figure B.0.5_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image7.jpg)
+![](./media/image7.jpg)
 
 Inside Container "compose" we created set of Directories, for this Tutorial we will the directory "test".
 
 **_Figure B.0.6_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image8.jpg) Using the following code, we are able to create compose_test are for Storage. (Please refer to Configuring Replicate with Azure Databricks Doc for more detail)
+![](./media/image8.jpg) Using the following code, we are able to create compose_test are for Storage. (Please refer to Configuring Replicate with Azure Databricks Doc for more detail)
 
 **_Figure B.0.7_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image9.jpg)
+![](./media/image9.jpg)
 
 We validate by going to Azure Databricks portal and verifying under "Data" Tab
 
 **_Figure B.0.8_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image10.jpg)
+![](./media/image10.jpg)
 
 Configure Storage Connection
 
@@ -132,13 +125,12 @@ Configure Storage Connection
 
 **_Figure B.0.10_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image11.png) Click on Database name and if Databricks and Azure ADLSv2 is setup correctly you should see following.
+![](./media/image11.png)    
+Click on Database name and if Databricks and Azure ADLSv2 is setup correctly you should see following.
 
 **_Figure B.0.11_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image12.png)
+![](./media/image12.png)
 
 If the '**...'** button does not bring up Select Schema windows please verify Databricks JDBC Driver is installed in C:\Program Files\Attunity\Compose for Data Lakes\java\jdbc Directory
 
@@ -148,8 +140,7 @@ If setup was successful storage connection will validate in Qlik Compose window.
 
 **_Figure B.0.11_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image13.jpg)
+![](./media/image13.jpg)
 
 At this point Compose will need to configure a "Landing" zone where data will need to be landed. Landing are in Qlik Compose term is where raw data is landed.
 
@@ -157,8 +148,7 @@ Put a name for your Landing Zone select your Database name in Azure Databricks D
 
 **_Figure B.0.12_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image14.jpg)
+![](./media/image14.jpg)
 
 **_Figure B.0.13_**
 
@@ -177,27 +167,23 @@ Click Manage Replicate Servers
 
 **_Figure C.1_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image16.jpeg) Add Replicate Servers
+![](./media/image16.jpeg)   
+Add Replicate Servers
 
 **_Figure C.2_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image17.jpg)
+![](./media/image17.jpg)
 
 **_Figure C.3_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image18.jpg)
-
+![](./media/image18.jpg)  
 Check Associate with Replicate task and Select your Replicate Task
 
 **_Figure C.4_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image19.png) Click on "Test Connection" to verify Connection
+![](./media/image19.png)   
+Click on "Test Connection" to verify Connection
 
 **_Figure C.5_**
 
-![A screenshot of a cell phone Description automatically
-generated](./media/image20.png)
+![](./media/image20.png)
