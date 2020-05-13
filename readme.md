@@ -7,8 +7,8 @@ John Park
 Principal Solution Architect  
 email: john.park@qlik.com  
 twitter: jpark328  
-github:https://github.com/Parkman328  
-linkedin: https://www.linkedin.com/in/jpark328/
+github:[link](https://github.com/Parkman328) 
+linkedin: [link](https://www.linkedin.com/in/jpark328/)
 
 ## Document List<br>
 --------------
