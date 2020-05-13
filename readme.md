@@ -10,7 +10,7 @@ twitter: jpark328
 github:https://github.com/Parkman328  
 linkedin: https://www.linkedin.com/in/jpark328/
 
-## Documnent List<br>
+## Document List<br>
 --------------
 
 [Configuring Azure ADLS Gen2 with Qlik Data Integration](./Configuring%20Azure%20ADLSv2%20for%20Qlik%20Data%20Integration/readme.md)  
