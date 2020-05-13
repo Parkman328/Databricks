@@ -2,7 +2,7 @@
 
 This Repo Contains Documentation, Code, and Notes on Qlik Partnership with Databricks
 
-The Author of this Repository 
+The Author of this Repository  
 John Park  
 Principal Solution Architect  
 email: john.park@qlik.com  
