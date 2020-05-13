@@ -22,4 +22,4 @@ linkedin: [link](https://www.linkedin.com/in/jpark328/)
 ## Activity Log
 --------------
 
-Feb 24 - 2020 Published to Qlik PE Repo
+Feb 24 - 2020 Published to Qlik PE Repository
